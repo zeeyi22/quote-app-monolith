@@ -8,7 +8,7 @@ user.  The application is seeded with a few quotes and more can be added via the
 ### Github
 The Quote application can be found at this Github repository -
 
-https://github.com/cmu-mis-iccfb-spring-17/quote-app-monolith
+https://github.com/mis-iccfb-primary/quote-app-monolith
 
 You should fork this repository and clone your copy from Github.  You will
 be working out of your copy at this point.
