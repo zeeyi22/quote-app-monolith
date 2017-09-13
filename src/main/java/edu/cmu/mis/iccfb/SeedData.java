@@ -53,9 +53,15 @@ public class SeedData {
                 "https://en.wikiquote.org/wiki/Albert_Einstein", 
                 a3);
         
+        Quote q4 = new Quote(
+        		"Imagination is more important than knowledge.",
+        		"https://www.goalcast.com/2017/03/29/top-30-most-inspiring-albert-einstein-quotes/",
+        		a3);
+        
         quoteService.save(q1);
         quoteService.save(q2);
         quoteService.save(q3);
+        quoteService.save(q4);
         
 //        log.info("Quoates found with findAll():");
 //        log.info("-------------------------------");

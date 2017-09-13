@@ -21,4 +21,13 @@ angular.module('app.controllers', [])
             }
         );
     };
+})
+.controller('GetQuoteCtrl', function ($scope ,$stateParams, QuoteService) {
+	let id = $stateParams.id;
+	console.log("id = " + id);
+	QuoteService.list({id : id})
+		.$promise.then(function(author) {
+			console.log("return promise" + author.name);
+			$scope.author = author;
+		});
 });

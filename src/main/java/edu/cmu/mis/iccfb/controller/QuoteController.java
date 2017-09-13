@@ -2,6 +2,7 @@ package edu.cmu.mis.iccfb.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -21,9 +22,17 @@ public class QuoteController {
     @Autowired
     private AuthorService authorService;
     
-    @RequestMapping("/api/quote/random")
+    @RequestMapping("/api/quote/randomquote")
     public Quote random() {
         return quoteService.randomQuote();
+    }
+
+    @RequestMapping( value = "/api/quotes/{id}" , method = RequestMethod.GET)
+    public Author random1(@PathVariable String id) {
+    	    long ID = Long.parseLong(id);
+    	    System.out.println( "author id = " + id);
+        Author author = authorService.findOne(ID);
+        return author;
     }
     
     @RequestMapping(value = "/api/quote", method = RequestMethod.POST)
