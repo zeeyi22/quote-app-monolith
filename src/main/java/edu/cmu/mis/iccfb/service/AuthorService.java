@@ -9,5 +9,5 @@ import edu.cmu.mis.iccfb.model.Author;
 public interface AuthorService extends CrudRepository<Author, Long> {
 
     Author findByName(String name);
-
+    Author findById(Long id);
 }
